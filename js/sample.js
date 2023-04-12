@@ -12,3 +12,4 @@ if (copy_message_btn) {
         document.querySelector('#message2').innerHTML = copy_message_btn.value;
     });
 }
+
