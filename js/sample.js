@@ -13,3 +13,13 @@ if (copy_message_btn) {
     });
 }
 
+const brokenImg = document.querySelector('img[alt="Part Three Image (put mouse over me to see/use first image)"]');
+const originalSrc = brokenImg.src;
+brokenImg.addEventListener('mouseover', function() {
+  const secondImg = document.querySelectorAll('img:not([alt="Part Three Image (put mouse over me to see/use first image)"])')[1];
+  brokenImg.src = secondImg.src;
+});
+brokenImg.addEventListener('mouseout', function() {
+    const secondImg = document.querySelectorAll('img:not([alt="Part Three Image (put mouse over me to see/use first image)"])')[1];
+    brokenImg.src = originalSrc;
+});
